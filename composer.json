@@ -1,0 +1,13 @@
+{
+    "name": "test/invoice-generator",
+    "description": "Just for testing",
+    "type": "\u001b[D library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aminul Islam Mamun",
+            "email": "mamun.amin1994@gmail.com"
+        }
+    ],
+    "require": {}
+}
