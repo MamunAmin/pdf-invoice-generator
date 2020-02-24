@@ -1,5 +1,7 @@
 <?php
 
+namespace Call
+
 require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 

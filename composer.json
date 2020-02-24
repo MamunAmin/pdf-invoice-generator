@@ -9,5 +9,9 @@
             "email": "mamun.amin1994@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Call\\": "pdf-invoice-generator/"
+        },
     "require": {}
 }
