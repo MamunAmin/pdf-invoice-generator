@@ -1,0 +1,14 @@
+{
+    "name": "tst22tst/invoice-generate-in-pdf",
+    "description": "just for test, nothing serious",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NumamsA",
+            "email": "mamun.amin1994@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
