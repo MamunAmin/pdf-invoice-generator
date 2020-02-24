@@ -2,16 +2,12 @@
     "name": "test22test/pdf-invoice-generator",
     "description": "donno wat to say",
     "type": "library",
-    "license": "LGPL-2.1",
+    "license": "MIT",
     "authors": [
         {
             "name": "Aminul Islam Mamun",
             "email": "mamun.amin1994@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Call\\": "pdf-invoice-generator/"
-        },
     "require": {}
 }
