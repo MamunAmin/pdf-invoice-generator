@@ -13,7 +13,7 @@ class PdfGenerator
 		$dompdf->loadHtml($html);
 		$dompdf->setPaper($paper, $type);
 		$dompdf->render();
-		$dompdf->stream();
+		return $dompdf->output();
 	}
 
 	public function get_html(Array $customerInfo, Array $shopInfo, Array $productInfo)
