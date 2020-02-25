@@ -1,10 +1,12 @@
 <?php
+
+namespace MamunAmin;
 	
 class InvoiceGenerator
 {
 	public function generate(Array $customerInfo, Array $shopInfo, Array $productInfo)
 	{
-		$template = file_get_contents(__DIR__ . '/base-template.html');
+		$template = file_get_contents(__DIR__ . '/../design/base-template.html');
 		foreach($customerInfo as $property => $value) {
 			$template = str_replace($property, $value, $template);
 		}
@@ -17,7 +19,7 @@ class InvoiceGenerator
 
 		$product_template = '';
 		foreach($productInfo as $singleProduct) {
-			$product = file_get_contents(__DIR__ . '/product-template.html');
+			$product = file_get_contents(__DIR__ . '/../design/product-template.html');
 			foreach($singleProduct as $property => $value) {
 				$product = str_replace($property, $value, $product);
 			}

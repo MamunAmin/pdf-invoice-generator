@@ -1,10 +1,10 @@
 <?php
 	
-require_once 'dompdf/autoload.inc.php';
+require_once '../lib/dompdf/autoload.inc.php';
+require_once '../src/InvoiceGenerator.php';
+
 use Dompdf\Dompdf;
-
-
-include 'InvoiceGenerator.php';
+use MamunAmin\InvoiceGenerator;
 
 
 $customerInfo = array(
