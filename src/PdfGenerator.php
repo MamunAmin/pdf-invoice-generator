@@ -8,12 +8,12 @@ class PdfGenerator
 {
 	public function generate(Array $customerInfo, Array $shopInfo, Array $productInfo, $paper = 'A4', $type = 'portrait')
 	{
-		$template = $this->get_html($customerInfo, $shopInfo, $productInfo);
+		$html = $this->get_html($customerInfo, $shopInfo, $productInfo);
 		$dompdf = new Dompdf();
 		$dompdf->loadHtml($html);
 		$dompdf->setPaper($paper, $type);
 		$dompdf->render();
-		// $dompdf->stream();
+		$dompdf->stream();
 	}
 
 	public function get_html(Array $customerInfo, Array $shopInfo, Array $productInfo)
