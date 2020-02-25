@@ -1,10 +1,22 @@
 <?php
 
 namespace MamunAmin;
+
+use Dompdf\Dompdf;
 	
-class InvoiceGenerator
+class PdfGenerator
 {
-	public function generate(Array $customerInfo, Array $shopInfo, Array $productInfo)
+	public function generate(Array $customerInfo, Array $shopInfo, Array $productInfo, $paper = 'A4', $type = 'portrait')
+	{
+		$template = $this->get_html($customerInfo, $shopInfo, $productInfo);
+		$dompdf = new Dompdf();
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper($paper, $type);
+		$dompdf->render();
+		// $dompdf->stream();
+	}
+
+	public function get_html(Array $customerInfo, Array $shopInfo, Array $productInfo)
 	{
 		$template = file_get_contents(__DIR__ . '/../design/base-template.html');
 		foreach($customerInfo as $property => $value) {

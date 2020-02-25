@@ -1,10 +1,9 @@
 <?php
 	
 require_once '../lib/dompdf/autoload.inc.php';
-require_once '../src/InvoiceGenerator.php';
+require_once '../src/PdfGenerator.php';
 
-use Dompdf\Dompdf;
-use MamunAmin\InvoiceGenerator;
+use MamunAmin\PdfGenerator;
 
 
 $customerInfo = array(
@@ -32,12 +31,7 @@ $productInfo = array(
 	]
 );
 
-$test = new InvoiceGenerator();
+$test = new PdfGenerator();
 
-$html =  $test->generate($customerInfo, $shopInfo, $productInfo);
+$pdf =  $test->generate($customerInfo, $shopInfo, $productInfo);
 
-$dompdf = new Dompdf();
-$dompdf->loadHtml($html);
-$dompdf->setPaper('A4', 'portrait');
-$dompdf->render();
-$dompdf->stream();
