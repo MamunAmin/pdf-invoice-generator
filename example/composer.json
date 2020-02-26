@@ -1,6 +1,0 @@
-{
-    "require": {
-        "php" : ">=7.1",
-        "dompdf/dompdf": "0.8.4"
-    }
-}

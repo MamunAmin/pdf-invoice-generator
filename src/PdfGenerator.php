@@ -1,6 +1,6 @@
 <?php
 
-namespace MamunAmin;
+namespace MamunAmin\InvoicePdf;
 
 use Dompdf\Dompdf;
 	

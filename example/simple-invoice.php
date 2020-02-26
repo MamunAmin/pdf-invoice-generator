@@ -1,9 +1,8 @@
 <?php
 	
-require_once '../vendor/autoload.php';
-require_once '../src/PdfGenerator.php';
+require_once '../loader.php';
 
-use MamunAmin\PdfGenerator;
+use MamunAmin\InvoicePdf\PdfGenerator;
 
 
 $customerInfo = array(
@@ -31,7 +30,8 @@ $productInfo = array(
 	]
 );
 
-$test = new PdfGenerator();
+$pdf = new PdfGenerator();
 
-$pdf =  $test->generate($customerInfo, $shopInfo, $productInfo);
+$invoice =  $pdf->generate($customerInfo, $shopInfo, $productInfo);
+file_put_contents(__DIR__ . '/invoice.pdf', $invoice);
 
